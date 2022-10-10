@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul class="list">
+        <li class="item">text</li>
+        <li class="item">text</li>
+        <li class="item">text</li>
+
+
+    </ul>
+
+
+
+
+
+    <script>
+const elemList = document.querySelector('.list');
+// const elemAll = document.querySelectorAll('.item');
+const elemAll = elemList.children.length;
+console.log(elemList);
+console.log(elemAll);
+
+const newList = document.createElement('ul');
+    newList.classList.add('big_box_for');
+    newList.style.width = '400px';
+    newList.style.height = '500px';
+
+
+const elemNewBox = document.createElement('div');
+// const elemNewBox = document.querySelector('div');
+elemNewBox.classList.add('for_box');
+elemNewBox.style.width = '50px';
+elemNewBox.style.height = '150px';
+elemNewBox.style.backgroundColor='red';
+
+    newList.append(elemNewBox);
+console.log(elemNewBox);
+
+
+    </script>
+    
+</body>
+</html>

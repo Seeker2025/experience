@@ -20,24 +20,31 @@
 
     <script>
 //создаём зелёный бокс с текстом        
-    const redBox = document.querySelector('div.red_box');
+    const redBox = document.querySelector('div.red_box');//это красный бокс
     console.log(redBox);    
         
-    const elemSel = document.createElement('h1');
-    elemSel.classList.add('this_is_title');
-    elemSel.textContent = 'This Is Primary Title.';
+    const elemSel = document.createElement('h1');//создаём зелёный бокс
+    elemSel.classList.add('this_is_title');//добавляем класс
+    elemSel.textContent = 'This Is Primary Title.';//добавляем текст
     elemSel.style.fontSize = '26px';
     elemSel.style.width = '350px';
     elemSel.style.height = '80px';
     elemSel.style.backgroundColor = 'green';
 
-    redBox.append(elemSel);
-   
+    redBox.append(elemSel);//добавляем в большой красный бокс зелёный бокс
     console.log(elemSel);
 
-    const numNew = 2;
+    console.log(document.querySelector('div.red_box').textContent);//смотрим текст из бокса
+
+    const numNew = '2';//Это строка
     console.log(numNew);
-    console.log(typeof(elemSel));
+
+    const stringToNum = Number(numNew);//метод Number преобразует строку к числу
+
+    console.log(typeof(stringToNum));
+    console.log(typeof(elemSel));//смотрим тип. Это объект
+    console.log(typeof(document.querySelector('div.red_box').textContent));//смотрим тип. Это строка
+
 
     </script>
     

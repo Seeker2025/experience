@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.red_box{
+            width: 450px;
+            height: 250px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="red_box"></div>
+
+
+
+    <script>
+//создаём зелёный бокс с текстом        
+    const redBox = document.querySelector('div.red_box');
+    console.log(redBox);    
+        
+    const elemSel = document.createElement('h1');
+    elemSel.classList.add('this_is_title');
+    elemSel.textContent = 'This Is Primary Title.';
+    elemSel.style.fontSize = '26px';
+    elemSel.style.width = '350px';
+    elemSel.style.height = '80px';
+    elemSel.style.backgroundColor = 'green';
+
+    redBox.append(elemSel);
+   
+    console.log(elemSel);
+
+    const numNew = 2;
+    console.log(numNew);
+    console.log(typeof(elemSel));
+
+    </script>
+    
+</body>
+</html>

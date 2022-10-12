@@ -71,7 +71,7 @@ const MIN_RATING = 8;
 const AUTHOR = "Bernard Cornwell";
 
 // метод filter возвращает новый массив с книгами, рейтинг которых больше чем 8. Деструктуризация объекта
-const topRatedBooks = books.filter(({ rating }) => rating <= MIN_RATING);
+const topRatedBooks = books.filter(({ rating }) => rating >= MIN_RATING);
 console.log(topRatedBooks);
 // здесь новый массив с книгами Bernard Cornwell. Деструктуризация объекта
 const booksByAuthor = books.filter(({ author }) => author === AUTHOR);

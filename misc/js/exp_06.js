@@ -86,15 +86,18 @@ const users = [
 // Массив друзей пользователя хранится в свойстве friends.
 
 // const getUsersWithFriend = (users, friendName) => {
-//   return users.filter(user => user.friends.includes(friendName));
-// }
-// console.log(getUsersWithFriend(users, "Briana Decker"));
+  //   return users.filter(user => user.friends.includes(friendName));
+  // }
+  // console.log(getUsersWithFriend(users, "Briana Decker"));
+  
+
+  
 
 // Задача 25/48
-const  getFriends = (users) => {
-  return users
-    .flatMap((friends) => friends)
-    .filter((user, index, array) => array.indexOf(user) === index);
-}
-console.log(getFriends(users));
+// const  getFriends = (users) => {
+//   return users
+//     .flatMap((friends) => friends)
+//     .filter((user, index, array) => array.indexOf(user) === index);
+// }
+// console.log(getFriends(users));
 

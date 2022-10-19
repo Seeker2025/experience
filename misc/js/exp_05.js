@@ -145,7 +145,7 @@ const users = [
     gender: "female"
   }
 ]
-// выбираем пользователей с цветом заданным в color. Зачем здесь map?
+// выбираем пользователей с цветом заданным в color. Зачем здесь map? Мар здесь не нужен. Ошибка в задаче
 const color = "brown";
 // const getUsersWithEyeColor = (users, color) => {
 // return  users.filter(user => user.eyeColor === color).map(user=>user);

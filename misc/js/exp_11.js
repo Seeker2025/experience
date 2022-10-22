@@ -37,8 +37,6 @@
 
 //====================================================================================
 
-// Задача 45/48
-
 // const newArr = [201, 5, 100, 2, 1, 7, 3, 4,];
 
 // // console.log(Array.isArray(newArr));
@@ -51,7 +49,7 @@
 
 // console.log(scores); // [61, 19, 74, 35, 92, 56]
 // console.log(ascendingScores); // [19, 35, 56, 61, 74, 92]
-
+//=====================================================================================
 
 const users = [
   {
@@ -118,12 +116,29 @@ const users = [
     gender: "female"
   }
 ];
+// Задача 45/48
 
-const getNamesSortedByFriendCount = users => [...users]
-  .sort((a, b) => a.friends.length - b.friends.length)
-  .map((itm) => itm.name);
+// const getNamesSortedByFriendCount = users => [...users]
+//   .sort((a, b) => a.friends.length - b.friends.length)
+//   .map((itm) => itm.name);
 
-console.log(getNamesSortedByFriendCount(users));
+// console.log(getNamesSortedByFriendCount(users));
+
+// ===================================================================
+
+// Задача 47/48
+
+const getSortedFriends = (users) => {
+    return (users)
+        .flatMap(user => user.friends)
+        .filter((user, inx, arr) => arr.indexOf(user) === inx)
+        .sort((a, b) => a.localeCompare(b));
+        
+};
+console.log(getSortedFriends(users));
+
+
+
 
 
     

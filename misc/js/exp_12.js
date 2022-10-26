@@ -1,5 +1,4 @@
 // Event Delegation
-
 //Модуль 8. Занятие 15. Делегирование событий(21/09)
 
 const colors = [
@@ -50,12 +49,14 @@ paletteContainer.addEventListener('click', onPalleteContainerClick)// add listen
 function onPalleteContainerClick(evt) {
     // contains метод проверяет наличие класса на элементе
     //если нету класса .color-swatch, то мы от сюда выходим
+
     if (!evt.target.classList.contains('color-swatch')) {
         return;
     }
 
     //находим и выделяем класс .is-active, если он есть. Затем удаляем с него класс .is-active
     //тоже самое делает функция removeActiveCardClass();
+
     // const currentActiveCard = document.querySelector('.color-card.is-active');
     //     if (currentActiveCard) {
     //         currentActiveCard.classList.remove('is-active');
@@ -72,6 +73,7 @@ function onPalleteContainerClick(evt) {
 
     
     //добавляем класс на родительский тэг с классом .is-active по click
+
     //тоже самое делает функция  addActiveCardClass(parentColorCard);
     // parentColorCard.classList.add('is-active');
 
@@ -79,6 +81,7 @@ function onPalleteContainerClick(evt) {
     
     //добавляем текущий цвет на body
     //тоже самое делает функция  setBodyBgColor(color)
+    
     // document.body.style.backgroundColor = swatchEl.dataset.hex;
 
     setBodyBgColor(swatchEl.dataset.hex);

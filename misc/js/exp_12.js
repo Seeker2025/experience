@@ -47,14 +47,14 @@ console.log(createColorCardsMarkup(colors));
 paletteContainer.addEventListener('click', onPalleteContainerClick)// add listener на родительский контейнер 
 
 function onPalleteContainerClick(evt) {
-    // contains метод проверяет наличие класса на элементе
+    // метод contains проверяет наличие класса на элементе
     //если нету класса .color-swatch, то мы от сюда выходим
 
     if (!evt.target.classList.contains('color-swatch')) {
         return;
     }
 
-    //находим и выделяем класс .is-active, если он есть. Затем удаляем с него класс .is-active
+    //по click добавляем .is-active на div.color-card 
     //тоже самое делает функция removeActiveCardClass();
 
     // const currentActiveCard = document.querySelector('.color-card.is-active');
@@ -72,7 +72,7 @@ function onPalleteContainerClick(evt) {
     const parentColorCard = swatchEl.closest('.color-card');
 
     
-    //добавляем класс на родительский тэг с классом .is-active по click
+    //по click добавляем .is-active на div.color-card 
 
     //тоже самое делает функция  addActiveCardClass(parentColorCard);
     // parentColorCard.classList.add('is-active');
@@ -94,7 +94,7 @@ function setBodyBgColor(color) {
 }
 
 
-//находим и выделяем класс .is-active, если он есть. Затем удаляем с него класс .is-active
+//находим и выделяем класс .is-active, если он есть. Затем удаляем с него .is-active
 function removeActiveCardClass() {
     const currentActiveCard = document.querySelector('.color-card.is-active');
     if (currentActiveCard) {
@@ -103,7 +103,7 @@ function removeActiveCardClass() {
 }
 
 
-//добавляем класс на родительский тэг с классом .is-active по click
+//по click добавляем .is-active на div.color-card  
 function addActiveCardClass(card) {
     card.classList.add('is-active');
 }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+    <style>
+        body{ font-family: 'Roboto'; background-color: gray;}
+        a{ color: rgb(23, 39, 72);}
+        ul, li{list-style-type: none;}
+        div.nevy_box{
+            width: 250px;
+            height: 150px;
+            background-color: rgb(63, 90, 137);
+        }
+        p.par{ color: rgb(82, 4, 4); }
+
+        .box{
+            box-sizing: border-box;
+            margin: 10px;
+            width: 250px;
+            height: 300px;
+            border: 2px solid maroon;
+        }
+        div.palette{ display: flex; justify-content: center; flex-wrap: wrap; }
+        .square__color{
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: rgb(207, 4, 4);
+        }
+        p.par__text{
+            text-align: center;
+            font-size: 16pt;
+        }
+        .is-active{ border: 6px dashed rgb(219, 2, 2); background-color: #fff;}
+
+       
+    </style>
+
+</head>
+<body>
+    <ul class="list">
+        <li class="item"><a href="../index.html">HOME</a></li>
+    </ul>
+
+    <div class="nevy_box"></div>
+
+<p class="par">Event Delegation. Four colors</p>
+
+<div class='palette js-palette'>
+
+    <!-- <div class="box">
+        <div class="suare__color"></div>
+        <p class="par__text">This text</p>
+    </div> -->
+
+
+   
+</div>
+
+
+
+
+<script src="js/exp_13.js" type="module"></script>
+</body>
+</html>

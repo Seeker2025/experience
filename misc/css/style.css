@@ -4,3 +4,8 @@ body{
     background-color: gray;
     
 }
+
+ul,
+li {
+    list-style-type: none;
+}

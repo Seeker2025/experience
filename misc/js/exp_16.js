@@ -16,31 +16,26 @@ const timer = {
         //if (this.isActive) {
         //    return;
         //}
-        // если таймер не активный выполняется этот код и false меняем  на true в line 21
-        const startTime = Date.now();      //начальное время
+        const startTime = Date.now(); 
         this.isActive = true;
         
         this.intervalId = setInterval(() => {
-            const currentTime = Date.now(); // ткущее время
+            const currentTime = Date.now(); 
             const deltaTime = currentTime - startTime   //разница между текущим и стартовым
             // console.log(currentTime - startTime);
             const time = getTimeComponents(deltaTime);
             // console.log(`${hours}:${mins}:${secs}`);
-
             updateClockface(time);
         }, 1000);
     },
         stop(){
             clearInterval(this.intervalId);
         },
-
  }; //obj timer
-
 // метод добавляет цифры в параграф p.clockface
 function updateClockface({ hours, mins, secs }) {
     refs.clockface.textContent = `${ hours }:${ mins }:${ secs }`;
 }
-
 // Метод преобразует число в строку и добавляет до двух символов '0' слева
 function pad(value) {
     return String(value).padStart(2, '0');
@@ -48,23 +43,17 @@ function pad(value) {
     // 7 => 07
     // 12=> 12
 }
-
 refs.startBtn.addEventListener('click', () => {
     timer.start();
-    
 });
-
 refs.stopBtn.addEventListener('click', () => {
     timer.stop();
 });
-
 function getTimeComponents(time){
         const hours = pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
         const mins = pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60)));
         const secs = pad(Math.floor((time % (1000 * 60)) / 1000));
         
         return { hours, mins, secs };
-        
         }
-
 // timer.start();

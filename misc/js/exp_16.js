@@ -51,7 +51,7 @@ function pad(value) {
 
 refs.startBtn.addEventListener('click', () => {
     timer.start();
-    refs.startBtn.style
+    
 });
 
 refs.stopBtn.addEventListener('click', () => {

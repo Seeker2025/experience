@@ -30,6 +30,7 @@ const timer = {
     },
         stop(){
             clearInterval(this.intervalId);
+            this.isActive = false;
         },
  }; //obj timer
 // метод добавляет цифры в параграф p.clockface

@@ -13,9 +13,9 @@ const timer = {
 
     start() {
         // если таймер активный (здесь true), то выходим из функции
-        //if (this.isActive) {
-        //    return;
-        //}
+        if (this.isActive) {
+           return;
+        }
         const startTime = Date.now(); 
         this.isActive = true;
         

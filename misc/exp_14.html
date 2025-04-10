@@ -23,7 +23,7 @@
             height: 300px;
             border: 2px solid maroon;
         }
-        div.palette{ display: flex; justify-content: center; flex-wrap: wrap; }
+        div.palette{ display: flex; justify-content: center; flex-wrap: wrap; flex-direction: column;}
         .square__color{
             width: 200px;
             height: 200px;
@@ -31,6 +31,7 @@
             background-color: rgb(207, 4, 4);
         }
         button{ margin: 0 5px; width: 120px; height: 45px;}
+        .palette_02{ display: flex; justify-content: center; flex-wrap: wrap; }
      
        
     </style>
@@ -46,10 +47,11 @@
 <p class="par">Times Interval. Console.log</p>
 
 <div class='palette'>
-    <p class="text_p">00</p>
+   <div class='palette_02'>
     <button class="js-start">Start</button>
     <button class="js-stop">Stop</button>
-   
+   </div>    
+    <p class="text_p">00</p>
 </div>
 
 <script src="js/exp_14.js" type="module"></script>

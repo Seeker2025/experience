@@ -15,13 +15,13 @@ let timerId = null;
 startBtn.addEventListener('click', () => {
     timerId = setInterval(() => {
         console.log(`I love async JS!  ${Math.random()}`);
-        textP.textContent = `I love async JS!  ${Math.random()}`;
+        textP.textContent = `I love async JS! Math.random() ${Math.random()}`;
     }, 1000);
 });
 
 stopBtn.addEventListener('click', () => {
     clearInterval(timerId);
     console.log(`Interval with id ${timerId} has stopped!`);
-     textP.textContent = '00';
+    textP.textContent = '00';
 });
 
